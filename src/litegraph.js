@@ -9229,7 +9229,7 @@ LGraphNode.prototype.executeAction = function(action)
                 if (node.skip_list)
                     return;
     
-                var entry = { value: node.type, content: node.title, has_submenu: false , callback : function(value, event, mouseEvent, contextMenu){
+                var entry = { value: node.type, desc: node.desc, content: node.title, has_submenu: false , callback : function(value, event, mouseEvent, contextMenu){
                     
                         var first_event = contextMenu.getFirstEvent();
                         canvas.graph.beforeChange();
@@ -11333,6 +11333,8 @@ LGraphNode.prototype.executeAction = function(action)
             options.scroll_speed = 0.1;
         }
 
+
+
         root.addEventListener("wheel", on_mouse_wheel, true);
         root.addEventListener("mousewheel", on_mouse_wheel, true);
 
@@ -11443,6 +11445,7 @@ LGraphNode.prototype.executeAction = function(action)
         } else {
             element.innerHTML = value && value.title ? value.title : name;
             element.value = value;
+            element.title = value.desc;
 
             if (value) {
                 if (value.disabled) {

@@ -2,6 +2,16 @@
 (function(global) {
     var LiteGraph = global.LiteGraph;
 
+    function WidgetInfo() {
+        this.addProperty("description", "");
+
+    }
+
+    WidgetInfo.prototype.onDrawForeground = function(ctx) {
+        // Draw (i) on the top corner of the widget
+    }
+
+
     /* Button ****************/
 
     function WidgetButton() {
