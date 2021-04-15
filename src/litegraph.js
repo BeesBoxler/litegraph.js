@@ -417,6 +417,7 @@
                 }
             }
 
+
             return this.auto_sort_node_types ? r.sort() : r;
         },
 
@@ -2279,6 +2280,7 @@
         this.title = title || "Unnamed";
         this.size = [LiteGraph.NODE_WIDTH, 60];
         this.graph = null;
+        this.desc = "";
 
         this._pos = new Float32Array(10, 10);
 

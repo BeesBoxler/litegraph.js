@@ -592,6 +592,7 @@ export declare class LGraphNode {
     static widgets_up: boolean;
     constructor(title?: string);
 
+    desc: string;
     title: string;
     type: null | string;
     size: Vector2;
